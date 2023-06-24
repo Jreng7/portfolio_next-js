@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { NavItem } from './nav-item'
 
 const NAV_ITENS = [
   {
@@ -16,8 +17,8 @@ const NAV_ITENS = [
 
 export const Header = () => {
   return (
-    <header>
-      <div className="container">
+    <header className='absolute top-0 w-full z-10 h-24 flex items-center justify-center'>
+      <div className="container flex item-center justify-between">
         <Link href="/">
           <Image 
             width={58}
@@ -27,9 +28,9 @@ export const Header = () => {
           />
         </Link>
 
-        <nav>
-          {NAV_ITENS.map(obj => (
-            
+        <nav className="flex items-center gap-4 sm:gap-10">
+          {NAV_ITENS.map(item => (
+            <NavItem {...item} key={item.label} />
           ))}
         </nav>
       </div>
