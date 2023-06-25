@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { TechBadge } from '../../tech-badge'
 
 export const HeroSection = () => {
   return (
@@ -13,8 +14,10 @@ export const HeroSection = () => {
             em projetos desafiadores. Estou sempre aberto a novas oportunidades e desafios.
           </p>
 
-          <div>
-            techs
+          <div className='flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]'>
+            {Array.from({ length: 7 }).map((_, index) => (
+              <TechBadge name="next.js"/>
+            ))}
           </div>
           <div>
             contato
