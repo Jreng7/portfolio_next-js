@@ -16,7 +16,6 @@ const NAV_ITENS = [
 ]
 
 
-
 export const Header = () => {
   return (
     <header className='absolute top-0 w-full z-10 h-24 flex items-center justify-center'>
