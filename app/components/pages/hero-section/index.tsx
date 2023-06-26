@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { TechBadge } from '../../tech-badge'
+import { Button } from '../../button'
 
 export const HeroSection = () => {
   return (
@@ -20,7 +21,7 @@ export const HeroSection = () => {
             ))}
           </div>
           <div>
-            contato
+            <Button />
           </div>
         </article>
 
